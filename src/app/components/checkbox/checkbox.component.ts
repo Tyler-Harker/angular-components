@@ -10,6 +10,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 export class CheckboxComponent implements OnInit {
   @Input() size: number = 16;
   @Input() value: boolean = false;
+  @Input() disabled: boolean = false;
   icon = faCheck;
   constructor() { }
 
@@ -17,6 +18,8 @@ export class CheckboxComponent implements OnInit {
   }
 
   toggle(){
-    this.value = !this.value;
+    if(!this.disabled){
+      this.value = !this.value;
+    }
   }
 }
