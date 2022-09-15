@@ -870,16 +870,6 @@
                 "name": "declarations",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/pages/worksheet.page/worksheet.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "[]",
-                "defaultValue": "[ExpanderComponent, CheckboxComponent]"
-            },
-            {
-                "name": "declarations",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/expander/expander.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -887,14 +877,24 @@
                 "defaultValue": "[ButtonComponent, CheckboxComponent]"
             },
             {
+                "name": "declarations",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/pages/worksheet.page/worksheet.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[ExpanderComponent, CheckboxComponent]"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/checkbox/checkbox.stories.ts",
+                "file": "src/app/components/expander/expander.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "() => ({\r\n    moduleMetadata: {\r\n        declarations\r\n    },\r\n    props: {\r\n        headerText: 'Title',\r\n        displayPreview: false,\r\n    },\r\n    template: ` <app-expander [headerText]=\"headerText\" [displayPreview]=displayPreview>\r\n                    <div header>\r\n                    </div>\r\n                    <div preview>\r\n                        test\r\n                    </div>\r\n                    <div content>\r\n                        content\r\n                    </div>\r\n                </app-expander>`\r\n})"
             },
             {
                 "name": "Default",
@@ -910,11 +910,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/expander/expander.stories.ts",
+                "file": "src/app/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
-                "defaultValue": "() => ({\r\n    moduleMetadata: {\r\n        declarations\r\n    },\r\n    props: {\r\n        headerText: 'Title',\r\n        displayPreview: false,\r\n    },\r\n    template: ` <app-expander [headerText]=\"headerText\" [displayPreview]=displayPreview>\r\n                    <div header>\r\n                    </div>\r\n                    <div preview>\r\n                        test\r\n                    </div>\r\n                    <div content>\r\n                        content\r\n                    </div>\r\n                </app-expander>`\r\n})"
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "DefaultBasic",
@@ -1039,11 +1039,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/checkbox/checkbox.stories.ts",
+                "file": "src/app/components/expander/expander.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<CheckboxComponent>",
-                "defaultValue": "(args: CheckboxComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<ExpanderComponent>",
+                "defaultValue": "(args: ExpanderComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1069,21 +1069,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/pages/worksheet.page/worksheet.stories.ts",
+                "file": "src/app/components/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<WorksheetPageComponent>",
-                "defaultValue": "(args: WorksheetPageComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<CheckboxComponent>",
+                "defaultValue": "(args: CheckboxComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/expander/expander.stories.ts",
+                "file": "src/app/pages/worksheet.page/worksheet.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ExpanderComponent>",
-                "defaultValue": "(args: ExpanderComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<WorksheetPageComponent>",
+                "defaultValue": "(args: WorksheetPageComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -1252,6 +1252,28 @@
                     "defaultValue": "(args: WorksheetPageComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/app/components/slider/slider.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/slider/slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/slider/slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SliderComponent>",
+                    "defaultValue": "(args: SliderComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "src/app/components/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Default",
@@ -1282,28 +1304,6 @@
                     "deprecationMessage": "",
                     "type": "Story<CheckboxComponent>",
                     "defaultValue": "(args: CheckboxComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/app/components/slider/slider.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/slider/slider.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/slider/slider.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<SliderComponent>",
-                    "defaultValue": "(args: SliderComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/components/button/button.stories.ts": [
