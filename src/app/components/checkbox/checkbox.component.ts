@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,6 +10,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 export class CheckboxComponent implements OnInit {
   @Input() size: number = 16;
   @Input() value: boolean = false;
+  @Output() valueChange = new EventEmitter<boolean>();
   @Input() disabled: boolean = false;
   icon = faCheck;
   constructor() { }
@@ -20,6 +21,7 @@ export class CheckboxComponent implements OnInit {
   toggle(){
     if(!this.disabled){
       this.value = !this.value;
+      this.valueChange.emit(this.value);
     }
   }
 }

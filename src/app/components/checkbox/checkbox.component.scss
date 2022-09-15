@@ -23,6 +23,9 @@
             fa-icon{
                 opacity: 1;
             }
+            &.disabled {
+                background-color: $primary;
+            }
         }
 
         fa-icon {
