@@ -3,7 +3,6 @@ import { Story, Meta, moduleMetadata } from '@storybook/angular';
 import {ExpanderComponent} from './expander.component';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { ButtonComponent } from '../button/button.component';
 import { CheckboxComponent } from '../checkbox/checkbox.component';
 
