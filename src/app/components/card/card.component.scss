@@ -12,5 +12,22 @@
             padding: 0px;
             background-color: $primary;
         }
+
+        &.header {
+
+        }
+
+        &.well {
+            border-top: 1px solid $grey-light;
+            background-color: $grey-light;
+        }
+
+        &.content {
+            border-top: 1px solid $grey-light;
+        }
+
+        &.footer {
+            border-top: 1px solid $grey-light;
+        }
     }
 }

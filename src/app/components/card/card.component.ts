@@ -18,13 +18,13 @@ export class CardComponent {
     return this.doesElementHaveContent(this.header);
   }
   shouldDisplayWell(): boolean {
-    return false;
+    return this.doesElementHaveContent(this.well);
   }
   shouldDisplayContent(): boolean {
-    return false;
+    return this.doesElementHaveContent(this.content);
   }
   shouldDisplayFooter(): boolean {
-    return false;
+    return this.doesElementHaveContent(this.footer);
   }
 
   private doesElementHaveContent(element: any): boolean{

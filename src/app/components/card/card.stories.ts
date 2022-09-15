@@ -36,14 +36,121 @@ export const Default = () => ({
         headerText: 'Title',
         displayPreview: false,
     },
-    template: ` <app-card>
+    template: ` <app-card [hasTopBar]="false">
                     <div header>
+                        Header
                     </div>
-                    <div preview>
-                        test
+                    <div well>
+                        Well
                     </div>
                     <div content>
-                        content
+                        Content
+                    </div>
+                    <div footer>
+                        Footer
+                    </div>
+                </app-card>`
+})
+export const DefaultNoContent = () => ({
+    moduleMetadata: {
+        declarations
+    },
+    props: {
+        headerText: 'Title',
+        displayPreview: false,
+    },
+    template: ` <app-card [hasTopBar]="false">
+                    <div header>
+                        Header
+                    </div>
+                    <div well>
+                        Well
+                    </div>
+                    <div footer>
+                        Footer
+                    </div>
+                </app-card>`
+})
+export const DefaultNoWell = () => ({
+    moduleMetadata: {
+        declarations
+    },
+    props: {
+        headerText: 'Title',
+        displayPreview: false,
+    },
+    template: ` <app-card [hasTopBar]="false">
+                    <div header>
+                        Header
+                    </div>
+                    <div content>
+                        Content
+                    </div>
+                    <div footer>
+                        Footer
+                    </div>
+                </app-card>`
+})
+export const DefaultNoHeader = () => ({
+    moduleMetadata: {
+        declarations
+    },
+    props: {
+        headerText: 'Title',
+        displayPreview: false,
+    },
+    template: ` <app-card [hasTopBar]="false">
+                    <div well>
+                        Well
+                    </div>
+                    <div content>
+                        Content
+                    </div>
+                    <div footer>
+                        Footer
+                    </div>
+                </app-card>`
+})
+export const DefaultNoFooter = () => ({
+    moduleMetadata: {
+        declarations
+    },
+    props: {
+        headerText: 'Title',
+        displayPreview: false,
+    },
+    template: ` <app-card [hasTopBar]="false">
+                    <div header>
+                        Header
+                    </div>
+                    <div well>
+                        Well
+                    </div>
+                    <div content>
+                        Content
+                    </div>
+                </app-card>`
+})
+export const DefaultWithTopBar = () => ({
+    moduleMetadata: {
+        declarations
+    },
+    props: {
+        headerText: 'Title',
+        displayPreview: false,
+    },
+    template: ` <app-card [hasTopBar]="true">
+                    <div header>
+                        Header
+                    </div>
+                    <div well>
+                        Well
+                    </div>
+                    <div content>
+                        Content
+                    </div>
+                    <div footer>
+                        Footer
                     </div>
                 </app-card>`
 })
