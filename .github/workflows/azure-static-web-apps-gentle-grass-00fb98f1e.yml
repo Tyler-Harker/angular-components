@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: true
+      - name: Npm Install
+        run: npm install
       - name: Build Storybook
         run: npm run build-storybook
       - name: Build And Deploy
