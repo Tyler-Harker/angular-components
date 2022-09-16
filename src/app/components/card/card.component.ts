@@ -6,7 +6,7 @@ import { AfterViewChecked, AfterViewInit, Component, Input, OnInit, ViewChild } 
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() hasTopBar: boolean = true;
+  @Input() hasTopBar: boolean = false;
 
   @ViewChild('header') header: any = null;
   @ViewChild('well') well: any = null;

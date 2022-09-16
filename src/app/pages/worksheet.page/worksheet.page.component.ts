@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-worksheet.page',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./worksheet.page.component.scss']
 })
 export class WorksheetPageComponent implements OnInit {
-
+  @Input() GapOptions: []
   constructor() { }
 
   ngOnInit() {

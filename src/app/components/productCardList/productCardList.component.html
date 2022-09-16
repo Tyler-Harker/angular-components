@@ -1,0 +1,9 @@
+<app-productCard *ngFor="let product of products;" 
+  [name]="product.name"
+  [id]="product.id"
+  [price]="product.price"
+  [imgUrl]="product.imgUrl"
+  [numberInCart]="getProductQty(product)"
+  (onAdd)="onAddProductCallback(product)"
+  (onRemove)="onRemoveProductCallback(product)">
+</app-productCard>

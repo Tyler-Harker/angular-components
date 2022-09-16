@@ -1,0 +1,10 @@
+<app-productCardList 
+  [products]="availableProducts"
+  [basketItems]="basketItems"
+  (onAddProduct)="onAddProductToCart($event)"
+  (onRemoveProduct)="onRemoveProductFromCart($event)">
+
+</app-productCardList>
+<app-basketCard [basketItems]="basketItems">
+
+</app-basketCard>

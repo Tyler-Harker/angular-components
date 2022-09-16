@@ -1,0 +1,11 @@
+:host{
+    display: flex;
+    justify-content: space-between;
+    > *{
+        flex-grow: 1;
+        margin-left: 20px;
+        &:first-of-type{
+            margin-left: 0px;
+        }
+    }
+}

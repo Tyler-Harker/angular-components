@@ -19,4 +19,12 @@
             }
         }
     }
+
+    .coverages {
+        display: flex;
+        justify-content: space-around;
+        app-card {
+            width: 200px;
+        }
+    }
 }

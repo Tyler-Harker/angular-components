@@ -1,0 +1,18 @@
+@import '../../../styles.scss';
+:host {
+    border-radius: 8px;
+    display: inline-block;
+    width: 280px;
+
+    .header {
+        text-align: center;
+    }
+
+    .well {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content {
+    }
+}

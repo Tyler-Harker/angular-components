@@ -1,0 +1,38 @@
+<app-card>
+  <div header class="header">
+    Basket
+  </div>
+  <div well class="well">
+    <div>
+      <label>No. Items: </label>
+      <div>{{basketItems.length}}</div>
+    </div>
+    <div>
+      <label>Price: </label>
+      <div>{{currencyFormatter.format(getBasketTotal())}}</div>
+    </div>
+  </div>
+  <div content class="content">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Qty</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let basketItem of basketItems">
+          <th scope="row">{{basketItem.product.id}}</th>
+          <td>{{basketItem.product.name}}</td>
+          <td>{{currencyFormatter.format(basketItem.product.price)}}</td>
+          <td>{{basketItem.qty}}</td>
+          <td><app-button text="Remove" (click)="removeBasketItem(basketItem)"></app-button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</app-card>

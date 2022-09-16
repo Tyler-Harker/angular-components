@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    app-card{
+        width: 320px;
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .imgWrapper {
+            width: 160px;
+            img {
+                width: 160px;
+                border-radius: 100%;;
+            }
+        }
+
+        .qty{
+            align-self: flex-end;
+            justify-self: flex-end;
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;;
+        justify-content: space-between;
+    }
+    
+    
+}
