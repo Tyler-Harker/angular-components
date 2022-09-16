@@ -12,7 +12,7 @@ import { BasketCardComponent } from 'src/app/components/basketCard/basketCard.co
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'Examples/Products/Components/BasketCard',
+  title: 'Examples/Products/Pages/ShoppingCart',
   component: ShoppingCartComponent,
   decorators: [
     moduleMetadata({
