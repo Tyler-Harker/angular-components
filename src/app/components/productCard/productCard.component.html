@@ -13,7 +13,7 @@
   <div footer class="footer">
     <div class="price">
       <label>Price:</label>
-      <div>{{currencyFormater.format(price)}}</div>
+      <div>{{getPriceFormatted()}}</div>
     </div>
     <app-button [type]="1" text="Remove" *ngIf="numberInCart > 0" (click)="removeFromCart()"></app-button>
     <app-button [type]="2" text="Add To Cart" (click)="addToCart()"></app-button>

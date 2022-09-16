@@ -9,7 +9,7 @@
     </div>
     <div>
       <label>Price: </label>
-      <div>{{currencyFormatter.format(getBasketTotal())}}</div>
+      <div>{{getBasketTotalFormatted()}}</div>
     </div>
   </div>
   <div content class="content">
@@ -27,7 +27,7 @@
         <tr *ngFor="let basketItem of basketItems">
           <th scope="row">{{basketItem.product.id}}</th>
           <td>{{basketItem.product.name}}</td>
-          <td>{{currencyFormatter.format(basketItem.product.price)}}</td>
+          <td>{{getBasketItemTotalFormatted(basketItem)}}</td>
           <td>{{basketItem.qty}}</td>
           <td><app-button text="Remove" (click)="removeBasketItem(basketItem)"></app-button></td>
         </tr>

@@ -7,7 +7,7 @@ import Product from 'src/app/models/product';
   templateUrl: './productCard.component.html',
   styleUrls: ['./productCard.component.scss']
 })
-export class ProductCardComponent implements OnInit {
+export class ProductCardComponent {
   @Input() name: string  = '';
   @Input() id: string = '';
   @Input() price: number = 0;
@@ -18,10 +18,8 @@ export class ProductCardComponent implements OnInit {
   @Output() onRemove: EventEmitter<string> = new EventEmitter<string>();
   @Output() onAdd: EventEmitter<string> = new EventEmitter<string>();
 
-  currencyFormater = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+  currencyFormater: Intl.NumberFormat | null = null;
   constructor() { }
-  ngOnInit() {
-  }
 
   addToCart(){
     this.onAdd.emit(this.id);
@@ -30,6 +28,9 @@ export class ProductCardComponent implements OnInit {
     this.onRemove.emit(this.id);
   }
 
-
+  getPriceFormatted(){
+    let formatter: Intl.NumberFormat = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+    return formatter.format(this.price);
+  }
 
 }

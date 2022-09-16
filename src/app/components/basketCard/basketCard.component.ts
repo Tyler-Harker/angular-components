@@ -9,7 +9,7 @@ import IBasketItem from 'src/app/models/basketItem';
 export class BasketCardComponent implements OnInit {
   @Input() basketItems: IBasketItem[] = [];
 
-  currencyFormatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+  static currencyFormatter: Intl.NumberFormat = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
 
   constructor() { }
 
@@ -33,6 +33,17 @@ export class BasketCardComponent implements OnInit {
   }
 
   removeBasketItem(basketItem: IBasketItem): void {
+    console.log('remove', basketItem, this.basketItems.indexOf(basketItem))
     this.basketItems.splice(this.basketItems.indexOf(basketItem), 1)
+    console.log(this.basketItems.length)
+  }
+
+  getBasketTotalFormatted(): string{
+    let formatter: Intl.NumberFormat = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+    return formatter.format(this.getBasketTotal());
+  }
+  getBasketItemTotalFormatted(basketItem: IBasketItem): string{
+    let formatter: Intl.NumberFormat = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+    return formatter.format(basketItem.qty * basketItem.product.price);
   }
 }

@@ -16,6 +16,7 @@ export class ProductCardListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.basketItems = [];
   }
 
   onAddProductCallback(product: Product){

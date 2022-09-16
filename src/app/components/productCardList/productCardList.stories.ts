@@ -52,6 +52,6 @@ Default.args = {
             price: 329999,
             imgUrl: 'https://th.bing.com/th/id/OIP.q-2mqKgmZrMNUIyJMucmFQHaE7?w=252&h=180&c=7&r=0&o=5&pid=1.7',
         }
-        
-    ]
+    ],
+    basketItems: []
 }

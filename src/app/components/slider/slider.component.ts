@@ -18,7 +18,7 @@ export class SliderComponent {
   private isDragging: boolean = false;
   position: string = 'test';
 
-  onDragMoved($event: CdkDragMove){
+  onCircleMoved($event: any){
     this.percentageValue = ($event.pointerPosition.x - this.backgroundElementPosition.x) / (this.backgroundElementWidth) * 100;
   }
 
@@ -47,7 +47,5 @@ export class SliderComponent {
     catch(ex) {
       return {x: 0, y: 0};
     }
-    
-    
   }
 }
